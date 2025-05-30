@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raw Material Entry</title>
+  <link rel="stylesheet" href="../css/entry_raw.css">
+</head>
+
+<body>
+  <div class="entry-container">
+    <h2>Raw Material Entry</h2>
+
+    <form class="form-grid">
+      <!-- Product Details -->
+      <div class="form-group">
+        <label for="productCode">Product Code:</label>
+        <select id="productCode" onchange="updateProductDetails()"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="atpStatus">ATP Status:</label>
+        <input type="text" id="atpStatus" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="atpExpiration">ATP Expiration:</label>
+        <input type="text" id="atpExpiration" readonly>
+      </div>
+
+      <!-- User Input Fields -->
+      <div class="form-group">
+        <label for="batchNumber">Batch Number:</label>
+        <input type="text" id="batchNumber">
+      </div>
+
+      <div class="form-group">
+        <label for="releaseStatus">Release Status:</label>
+        <select id="releaseStatus">
+          <option value="PASSED">PASSED</option>
+          <option value="FAILED">FAILED</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="assayAsIs">Assay (As Is):</label>
+        <input type="number" id="assayAsIs">
+      </div>
+
+      <div class="form-group">
+        <label for="assayDried">Assay (Dried):</label>
+        <input type="number" id="assayDried">
+      </div>
+
+      <div class="form-group">
+        <label for="releaseDate">Release Date:</label>
+        <input type="date" id="releaseDate">
+      </div>
+
+      <div class="form-group">
+        <label for="potency1">Potency 1:</label>
+        <input type="number" id="potency1">
+      </div>
+
+      <div class="form-group">
+        <label for="potency2">Potency 2:</label>
+        <input type="number" id="potency2">
+      </div>
+
+      <button type="submit">Submit Entry</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="../data/raws.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <label for="username">Select Username:</label>
+    <select id="username"></select>
+
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password">
+
+    <p id="forgotPassword"><a href="mailto:timothy.batchelder@sandoz.net?subject=Password Reset Request&body=Please reset my password for the LIMS Email system.">Forgot Password?</a></p>
+
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="data/users.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
