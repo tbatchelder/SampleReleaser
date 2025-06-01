@@ -92,18 +92,6 @@ h2 {
   min-width: 100px;
 }
 
-/* ATP Status */
-#entryTable th:nth-child(5),
-#entryTable td:nth-child(5) {
-  min-width: 120px;
-}
-
-/* ATP Expiration */
-#entryTable th:nth-child(6),
-#entryTable td:nth-child(6) {
-  min-width: 120px;
-}
-
 /* Batch Number */
 #entryTable th:nth-child(7),
 #entryTable td:nth-child(7) {
@@ -116,13 +104,13 @@ h2 {
   min-width: 100px;
 }
 
-/* Assay (As Is) */
+/* Assay 1 */
 #entryTable th:nth-child(9),
 #entryTable td:nth-child(9) {
   min-width: 100px;
 }
 
-/* Assay (Dried) */
+/* Assay 2 */
 #entryTable th:nth-child(10),
 #entryTable td:nth-child(10) {
   min-width: 120px;
@@ -132,18 +120,6 @@ h2 {
 #entryTable th:nth-child(11),
 #entryTable td:nth-child(11) {
   min-width: 100px;
-}
-
-/* Potency 1 */
-#entryTable th:nth-child(12),
-#entryTable td:nth-child(12) {
-  min-width: 100px;
-}
-
-/* Potency 2 */
-#entryTable th:nth-child(13),
-#entryTable td:nth-child(13) {
-  min-width: 80px;
 }
 
 /* Actions */

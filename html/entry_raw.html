@@ -12,75 +12,63 @@
   <div class="entry-container">
     <h2>Raw Material Entry</h2>
 
-    <form class="form-grid">
-      <!-- Product Details -->
-      <div class="form-group">
-        <label for="productCode">Product Code:</label>
-        <select id="productCode" onchange="updateProductDetails()"></select>
-      </div>
+    <table id="entryTable">
+      <thead>
+        <tr>
+          <th>LIMS Number</th>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>ATP Status</th>
+          <th>ATP Expiration</th>
+          <th>Batch Number</th>
+          <th>Release Status</th>
+          <th>Assay (As Is)</th>
+          <th>Assay (Dried)</th>
+          <th>Release Date</th>
+          <th>Potency 1</th>
+          <th>Potency 2</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="limsNumber" placeholder="Enter LIMS #"></td>
+          <td>
+            <select name="productCode" onchange="updateProductDetails(this)">
+              <option value="">Select Product</option>
+            </select>
+          </td>
+          <td><input type="text" name="productName" readonly placeholder="Auto-filled"></td>
+          <td><input type="text" name="atpStatus" readonly placeholder="Auto-filled"></td>
+          <td><input type="text" name="atpExpiration" readonly placeholder="Auto-filled"></td>
+          <td><input type="text" name="batchNumber" placeholder="Enter batch #"></td>
+          <td>
+            <select name="releaseStatus">
+              <option value="">Select Status</option>
+              <option value="PASSED">PASSED</option>
+              <option value="FAILED">FAILED</option>
+            </select>
+          </td>
+          <td><input type="number" name="assayAsIs" placeholder="0.00"></td>
+          <td><input type="number" name="assayDried" placeholder="0.00"></td>
+          <td><input type="date" name="releaseDate"></td>
+          <td><input type="number" name="potency1" placeholder="0.00"></td>
+          <td><input type="number" name="potency2" placeholder="0.00"></td>
+          <td>
+            <div style="display: flex; gap: 5px;">
+              <button class="add-btn" onclick="addRow(this)">➕</button>
+              <button class="remove-btn" onclick="removeRow(this)">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-      <div class="form-group">
-        <label for="productName">Product Name:</label>
-        <input type="text" id="productName" readonly>
-      </div>
-
-      <div class="form-group">
-        <label for="atpStatus">ATP Status:</label>
-        <input type="text" id="atpStatus" readonly>
-      </div>
-
-      <div class="form-group">
-        <label for="atpExpiration">ATP Expiration:</label>
-        <input type="text" id="atpExpiration" readonly>
-      </div>
-
-      <!-- User Input Fields -->
-      <div class="form-group">
-        <label for="batchNumber">Batch Number:</label>
-        <input type="text" id="batchNumber">
-      </div>
-
-      <div class="form-group">
-        <label for="releaseStatus">Release Status:</label>
-        <select id="releaseStatus">
-          <option value="PASSED">PASSED</option>
-          <option value="FAILED">FAILED</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="assayAsIs">Assay (As Is):</label>
-        <input type="number" id="assayAsIs">
-      </div>
-
-      <div class="form-group">
-        <label for="assayDried">Assay (Dried):</label>
-        <input type="number" id="assayDried">
-      </div>
-
-      <div class="form-group">
-        <label for="releaseDate">Release Date:</label>
-        <input type="date" id="releaseDate">
-      </div>
-
-      <div class="form-group">
-        <label for="potency1">Potency 1:</label>
-        <input type="number" id="potency1">
-      </div>
-
-      <div class="form-group">
-        <label for="potency2">Potency 2:</label>
-        <input type="number" id="potency2">
-      </div>
-
-      <button type="submit">Submit Entry</button>
-    </form>
-
-    <p id="message"></p>
+    <button onclick="downloadAsFile()">Download Entries</button>
   </div>
 
   <script src="../data/raws.js"></script>
-  <script src="../js/script.js"></script>
+  <script src="../js/raws.js"></script>
 </body>
 
 </html>

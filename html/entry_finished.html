@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finished Product Entry</title>
+  <link rel="stylesheet" href="../css/entry_fp.css">
+</head>
+
+<body>
+  <div class="entry-container">
+    <h2>Finished Product Entry</h2>
+
+    <table id="entryTable">
+      <thead>
+        <tr>
+          <th>LIMS Number</th>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>Batch Number</th>
+          <th>Release Status</th>
+          <th>Assay 1</th>
+          <th>Assay 2</th>
+          <th>Release Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" name="limsNumber" placeholder="Enter LIMS #"></td>
+          <td>
+            <input type="text" name="productCode" readonly placeholder="Auto-filled" >
+          </td>
+          <td>
+            <select  name="productName"  onchange="updateProductDetails(this)">
+              <option value="">Select Product</option>
+            </select>
+          </td>
+          <td><input type="text" name="batchNumber" placeholder="Enter batch #"></td>
+          <td>
+            <select name="releaseStatus">
+              <option value="">Select Status</option>
+              <option value="PASSED">PASSED</option>
+              <option value="FAILED">FAILED</option>
+            </select>
+          </td>
+          <td><input type="number" name="assay1" placeholder="0.00"></td>
+          <td><input type="number" name="assay2" placeholder="0.00"></td>
+          <td><input type="date" name="releaseDate"></td>
+          <td>
+            <div style="display: flex; gap: 5px;">
+              <button class="add-btn" onclick="addRow(this)">➕</button>
+              <button class="remove-btn" onclick="removeRow(this)">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button onclick="downloadAsFile()">Download Entries</button>
+  </div>
+
+  <script src="../data/finished.js"></script>
+  <script src="../js/finished.js"></script>
+</body>
+
+</html>
