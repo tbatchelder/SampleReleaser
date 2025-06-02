@@ -93,32 +93,32 @@ h2 {
 }
 
 /* Batch Number */
+#entryTable th:nth-child(5),
+#entryTable td:nth-child(5) {
+  min-width: 100px;
+}
+
+/* Release Status */
+#entryTable th:nth-child(6),
+#entryTable td:nth-child(6) {
+  min-width: 100px;
+}
+
+/* Assay 1 */
 #entryTable th:nth-child(7),
 #entryTable td:nth-child(7) {
   min-width: 100px;
 }
 
-/* Release Status */
+/* Assay 2 */
 #entryTable th:nth-child(8),
 #entryTable td:nth-child(8) {
-  min-width: 100px;
-}
-
-/* Assay 1 */
-#entryTable th:nth-child(9),
-#entryTable td:nth-child(9) {
-  min-width: 100px;
-}
-
-/* Assay 2 */
-#entryTable th:nth-child(10),
-#entryTable td:nth-child(10) {
   min-width: 120px;
 }
 
 /* Release Date */
-#entryTable th:nth-child(11),
-#entryTable td:nth-child(11) {
+#entryTable th:nth-child(9),
+#entryTable td:nth-child(9) {
   min-width: 100px;
 }
 

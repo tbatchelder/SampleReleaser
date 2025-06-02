@@ -1,0 +1,272 @@
+.review-controls {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.file-info {
+  background: white;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+}
+
+.review-actions {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  text-align: center;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.approve-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reject-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.load-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message {
+  display: none;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.info {
+  background: #cce7ff;
+  color: #004085;
+  border: 1px solid #99d6ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+.entry-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  min-width: fit-content;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#reviewTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: white;
+}
+
+#reviewTable th,
+#reviewTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  position: relative;
+}
+
+#reviewTable th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Key fix: Make inputs fill their containers properly */
+#reviewTable input,
+#reviewTable select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: white;
+  min-width: 0;
+  /* Important for table layout */
+}
+
+#reviewTable input:focus,
+#reviewTable select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#reviewTable input[readonly] {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Set minimum widths for specific columns */
+#reviewTable th:nth-child(1),
+#reviewTable td:nth-child(1) {
+  min-width: 120px;
+}
+
+/* LIMS Number */
+#reviewTable th:nth-child(2),
+#reviewTable td:nth-child(2) {
+  min-width: 100px;
+}
+
+/* Product Code */
+#reviewTable th:nth-child(3),
+#reviewTable td:nth-child(3) {
+  min-width: 150px;
+}
+
+/* Product Name */
+#reviewTable th:nth-child(4),
+#reviewTable td:nth-child(4) {
+  min-width: 100px;
+}
+
+/* ATP Status */
+#reviewTable th:nth-child(5),
+#reviewTable td:nth-child(5) {
+  min-width: 120px;
+}
+
+/* ATP Expiration */
+#reviewTable th:nth-child(6),
+#reviewTable td:nth-child(6) {
+  min-width: 120px;
+}
+
+/* Batch Number */
+#reviewTable th:nth-child(7),
+#reviewTable td:nth-child(7) {
+  min-width: 100px;
+}
+
+/* Release Status */
+#reviewTable th:nth-child(8),
+#reviewTable td:nth-child(8) {
+  min-width: 100px;
+}
+
+/* Assay (As Is) */
+#reviewTable th:nth-child(9),
+#reviewTable td:nth-child(9) {
+  min-width: 100px;
+}
+
+/* Assay (Dried) */
+#reviewTable th:nth-child(10),
+#reviewTable td:nth-child(10) {
+  min-width: 120px;
+}
+
+/* Release Date */
+#reviewTable th:nth-child(11),
+#reviewTable td:nth-child(11) {
+  min-width: 100px;
+}
+
+/* Potency 1 */
+#reviewTable th:nth-child(12),
+#reviewTable td:nth-child(12) {
+  min-width: 100px;
+}
+
+/* Potency 2 */
+#reviewTable th:nth-child(13),
+#reviewTable td:nth-child(13) {
+  min-width: 80px;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.btn-approve {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-reject {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .entry-container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #reviewTable {
+    font-size: 12px;
+  }
+
+  #reviewTable th,
+  #reviewTable td {
+    padding: 4px;
+  }
+}

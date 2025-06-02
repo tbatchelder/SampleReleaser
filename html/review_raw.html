@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raw Material Review</title>
+  <link rel="stylesheet" href="../css/review_raw.css">
+</head>
+
+<body>
+  
+  <div class="entry-container">
+    <h2>Raw Material Review</h2>
+
+    <!-- Add this to the top of your review page -->
+    <div class="review-controls">
+      <div class="date-selector">
+        <label for="reviewDate">Select Review Date:</label>
+        <input type="date" id="reviewDate" name="reviewDate">
+        <button onclick="loadFileByDate()" class="load-btn">Load Data</button>
+      </div>
+    
+      <!-- Hidden file input for file selection -->
+      <input type="file" id="fileInput" accept=".json" style="display: none;">
+    
+      <!-- File information display -->
+      <div id="fileInfo" class="file-info"></div>
+    </div>
+
+    <table id="reviewTable">
+      <thead>
+        <tr>
+          <th>LIMS Number</th>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>ATP Status</th>
+          <th>ATP Expiration</th>
+          <th>Batch Number</th>
+          <th>Release Status</th>
+          <th>Assay (As Is)</th>
+          <th>Assay (Dried)</th>
+          <th>Release Date</th>
+          <th>Potency 1</th>
+          <th>Potency 2</th>
+        </tr>
+      </thead>
+      <tbody id="reviewTableBody">
+        
+      </tbody>
+    </table>
+
+    <div id="reviewActions" style="display: none;">
+      <button onclick="approveBatch()" class="btn-approve">Approve Batch</button>
+      <button onclick="rejectBatch()" class="btn-reject">Reject Batch</button>
+      <button onclick="addBatchComments()" class="btn-comments">Add Comments</button>
+    </div>
+  </div>
+
+  <script src="../js/rawsreview.js"></script>
+</body>
+
+</html>
