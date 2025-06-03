@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Release Viewer</title>
+  <link rel="stylesheet" href="../css/viewer.css">
+</head>
+
+<body>
+
+  <div class="entry-container">
+    <h2>Raw Material Viewer</h2>
+  
+    <div class="review-controls">
+      <div class="date-selector">
+        <label for="reviewRMDate">Select Approval Date:</label>
+        <input type="date" id="reviewRMDate" name="reviewRMDate">
+        <button onclick="loadRMFileByDate()" class="load-btn">Load Raw Material Data</button>
+      </div>
+  
+      <!-- File information display -->
+      <div id="rmFileInfo" class="file-info"></div>
+    </div>
+  
+    <table id="rmReviewTable">
+      <thead>
+        <tr>
+          <th>LIMS Number</th>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>ATP Status</th>
+          <th>ATP Expiration</th>
+          <th>Batch Number</th>
+          <th>Release Status</th>
+          <th>Assay (As Is)</th>
+          <th>Assay (Dried)</th>
+          <th>Release Date</th>
+          <th>Potency 1</th>
+          <th>Potency 2</th>
+        </tr>
+      </thead>
+      <tbody id="rmReviewTableBody">
+        <tr>
+          <td colspan="12" class="no-data">No data loaded. Please select a date and load data.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="entry-container">
+    <h2>Finished Product Viewer</h2>
+  
+    <div class="review-controls">
+      <div class="date-selector">
+        <label for="reviewFPDate">Select Approval Date:</label>
+        <input type="date" id="reviewFPDate" name="reviewFPDate">
+        <button onclick="loadFPFileByDate()" class="load-btn">Load Finished Product Data</button>
+      </div>
+  
+      <!-- File information display -->
+      <div id="fpFileInfo" class="file-info"></div>
+    </div>
+  
+    <table id="fpReviewTable">
+      <thead>
+        <tr>
+          <th>LIMS Number</th>
+          <th>Product Code</th>
+          <th>Product Name</th>
+          <th>Batch Number</th>
+          <th>Release Status</th>
+          <th>Assay 1</th>
+          <th>Assay 2</th>
+          <th>Release Date</th>
+        </tr>
+      </thead>
+      <tbody id="fpReviewTableBody">
+        <tr>
+          <td colspan="8" class="no-data">No data loaded. Please select a date and load data.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Hidden file inputs for file selection -->
+  <input type="file" id="rmFileInput" accept=".json" style="display: none;">
+  <input type="file" id="fpFileInput" accept=".json" style="display: none;">
+
+  <script src="../js/viewer.js"></script>
+</body>
+
+</html>
